@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on tachunn labs</title>
+    <link>tachunwu.github.io/posts/</link>
+    <description>Recent content in Posts on tachunn labs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© tachunn</copyright>
+    <lastBuildDate>Tue, 05 Apr 2022 22:19:52 +0800</lastBuildDate><atom:link href="tachunwu.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New start</title>
+      <link>tachunwu.github.io/posts/new_start/</link>
+      <pubDate>Tue, 05 Apr 2022 22:19:52 +0800</pubDate>
+      
+      <guid>tachunwu.github.io/posts/new_start/</guid>
+      <description>這個部落格主要拿來放我的底片，也可能會寫一些其他的東西。</description>
+    </item>
+    
+  </channel>
+</rss>

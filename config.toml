@@ -1,4 +1,4 @@
-baseURL = "tachunwu.github.io/"
+baseURL = "https://tachunwu.github.io/"
 languageCode = "en-us"
 title = "tachunn labs"
 theme="archie"

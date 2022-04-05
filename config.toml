@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "tachunn labs"
 theme="archie"
 copyright = "© tachunn"
+publishdir = "./"
+
 
 # Code Highlight
 pygmentsstyle = "monokai"

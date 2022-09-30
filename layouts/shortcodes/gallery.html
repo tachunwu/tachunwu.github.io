@@ -1,0 +1,7 @@
+{{ $galleryUrl := print "/static/img/" ($.Get 0) }}
+{{ range readDir $galleryUrl }}
+    {{ $imgURL := print "img/" ($.Get 0) "/" .Name | absURL }}
+    <p>
+        <img src="{{ $imgURL }}"/>
+    </p>
+{{ end }}

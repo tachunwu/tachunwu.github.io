@@ -4,6 +4,7 @@ date: 2022-10-04T14:18:27+08:00
 draft: false
 tags: ["philosophy"]
 ---
+
 # 簡介
 主要探討意識和訊息的運作過程
 

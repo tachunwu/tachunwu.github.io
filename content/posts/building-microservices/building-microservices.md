@@ -43,19 +43,34 @@ Microservice 需要其他微服務的資料，經由另一個服務 Pass-Through
 4. Content Coupling
 請直接避免這種問題！服務繞過商業邏輯，直接修改內部狀態，基本上會造成系統嚴重內部錯誤。
 
-> 如何 Model Microservice/如何 Domain-Driven Design?
-
 > 如何跨服務 Reference?
-
-
-> 如何從單體拆分成 Microservice?
 
 > Microservice 溝通模式？
 * Synchronous blocking
+定義：
+優點：
+缺點：
+使用情境：
 * Asynchronous nonblocking
+定義：
+優點：
+缺點：
+使用情境：
 * Request-response
+定義：
+優點：
+缺點：
+使用情境：
 * Event-driven
+定義：
+優點：
+缺點：
+使用情境：
 * Common data
+定義：
+優點：
+缺點：
+使用情境：
 
 
 # Implementation

@@ -1,9 +1,10 @@
 ---
-title: "(動態更新)新竹私房美食清單"
-date: 2022-10-03T15:56:19+08:00
+title: "新竹私房美食清單"
+date: 2022-10-25T19:25:00+08:00
 draft: false
 tags: ["life"]
 ---
+
 # 阿桂牛羊雜
 ## 介紹
 阿桂牛羊雜位在城隍廟附近，非常有記憶點的熱炒，口味是中式的湘菜風味。我個人是會點炒牛肉和青菜，本身的湯和飯都是免費的，湯一定要點，超好喝。比較需要注意的是如果沒有在菜單上畫上牛肉或是羊肉，預設是會上牛羊雜，點餐的時候要特別注意。如果吃辣的話推薦一定要辣，能夠充分表現調味的香氣。
@@ -11,17 +12,16 @@ tags: ["life"]
 * 孜然/蔥爆牛羊肉
 * 炒青菜
 * 清湯
-![](/img/hsinchu-food-list/0-rest.jpg)
-![](/img/hsinchu-food-list/0-food.jpg)
+![0-rest](https://user-images.githubusercontent.com/95557928/197761301-d33cbec5-ae1a-4541-9d65-4c6b464edc51.jpeg)
+![0-food](https://user-images.githubusercontent.com/95557928/197761315-2d164b26-55d7-4300-ba19-c9b66675b237.jpeg)
 
 # 飲川
 ## 介紹
 飲川是在清大商圈附近的飲料店，不是連鎖的只有這裡有，就店外觀來說看起來很像網美店，但其實是手搖店。茶本身品質完全高出其他手搖店一個等級，就算舌頭不是很靈光的也一定喝得出來。這家的飲料完全詮釋了精緻的飲料是什麼樣子，他們連冰塊和珍珠都是用茶做的(好扯)，我個人推薦是點拿鐵類的，這樣冰塊慢慢融化的時候茶味就會慢慢的取代牛奶的味道，讓整杯飲料喝起來有起承轉合，建議各位嘗試看看。除此之外店內還有老闆的私人黑膠收藏，算是去店裡的小驚喜。
 ## 推薦餐點 (價位大概 $100)
 * 鐵觀音蜜拿鐵(正常冰 + 珍珠)
-![](/img/hsinchu-food-list/1-rest-0.jpg)
-![](/img/hsinchu-food-list/1-rest-1.jpg)
-![](/img/hsinchu-food-list/1-rest-3.jpg)
-![](/img/hsinchu-food-list/1-rest-2.jpg)
-
+![1-rest-0](https://user-images.githubusercontent.com/95557928/197761345-c340d23a-485d-4a6a-bccd-c636ebb56862.jpeg)
+![1-rest-1](https://user-images.githubusercontent.com/95557928/197761482-e894fd66-924a-477d-8a3d-d85df8b93ed8.jpeg)
+![1-rest-2](https://user-images.githubusercontent.com/95557928/197761506-c5e100be-f2e1-4ce6-8278-bce6f8845dd3.jpeg)
+![1-rest-3](https://user-images.githubusercontent.com/95557928/197761534-0fc3a035-bd90-4915-a949-72386797ca9c.jpeg)
 

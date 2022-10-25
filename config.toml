@@ -9,7 +9,7 @@ pygmentsstyle = "monokai"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
-paginate=10 # articles per page
+paginate=3 # articles per page
 
 # Social Tags
 

@@ -30,7 +30,7 @@ tags: ["think"]
 這就衍伸了另一個務實上的想法，我想要讓我的音樂帶著什麼樣的質感(精緻？夢幻？復古？粗糙？漂浮？)。也就是我已經先預設好了音樂的形式，再想辦法轉換成其他的感受，就是要踩在到底算是聲音還是音樂的邊界上。
 
 # 介紹單曲(進入正題拉！)
-## [language game]() 
+## [language game](https://open.spotify.com/track/0f6mB4uAhPVohRlA6EkcyR?si=0a36f709d43a4917) 
 
 這首是用類比的方式製作的，我用我家彈20年的鋼琴錄音的 (如果好奇是什麼麥克風是 shure-SM57)。我完全沒有寫譜，就是一直開著錄音隨便即興，然後再選自己喜歡的片段剪一剪做成。
 ![make-of-ep-2022_1](https://user-images.githubusercontent.com/95557928/197772255-30950919-2916-4a3f-8068-263544d2d4ef.jpg)

@@ -1,5 +1,5 @@
 ---
-title: "Where Are We From"
+title: "Inner Dialogue"
 date: 2022-11-11T22:43:56+08:00
 draft: false
 ---

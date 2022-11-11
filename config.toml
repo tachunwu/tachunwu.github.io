@@ -39,3 +39,10 @@ weight = 3
 name = "Tags"
 url = "/tags"
 weight = 4
+
+
+[markup]
+[markup.tableOfContents]
+endLevel = 2
+ordered = true
+startLevel = 1

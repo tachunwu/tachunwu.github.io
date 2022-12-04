@@ -1,4 +1,7 @@
 <header>
+{{ if not .Site.IsServer }}
+{{ template "_internal/google_analytics_async.html" . }}
+{{ end }}
 	<div class="main">
 		<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
 	</div>

@@ -1,7 +1,7 @@
 ---
 title: "<順勢溝通> 閱讀筆記"
 date: 2022-12-12T16:15:46+08:00
-draft: true
+draft: false
 ---
 {{toc}}
 # 對話的語意解釋 (Ch. 1)

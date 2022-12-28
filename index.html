@@ -3,14 +3,10 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-2LYZQ778V0")</script><div class=main><a href=https://tachunwu.github.io/>Tachunn Publication</a></div><nav><a href=/>Home</a>
 <a href=/posts>All posts</a>
 <a href=/about>About</a>
-<a href=/tags>Tags</a></nav></header><main class=list><div class=site-description></div><section class=list-item><h1 class=title><a href=/posts/ms-tcc/>&lt;Life beyond Distributed Transactions: an Apostate’s Opinion> 碩論筆記</a></h1><time>Dec 28, 2022</time><br><div class=description>Abstract 探討 Scale Appilication 的語言學
+<a href=/tags>Tags</a></nav></header><main class=list><div class=site-description></div><section class=list-item><h1 class=title><a href=/posts/ms-tcc/>&lt;Life beyond Distributed Transactions: an Apostate’s Opinion> 碩論筆記</a></h1><time>Dec 28, 2022</time><br><div class=description>Index Abstract 假設 Layers of the Appilication & Scale-aware Transactional Scopes 用詞定義 Entities Atmoic Transactions Messages Activities Distributed Transaction Remembering Messages as State Tentative/Cancel/Confirm 個人思考 Abstract 探討 Scale Appilication 的語言學
 假設 Layers of the Appilication & Scale-aware 上層不用考慮 Scale 下層需要實作 Scale-aware Transactional Scopes 本文聚焦在討論 Transaction 在特定集合內的 Serializability，我們只要求在特定的機器內部維持隔離性，而不是整個 Data Center 強制維持一致。
 用詞定義 Entities 本文定義 Entity 必須擁有一個 ID 或是 Key，而且在 Entity 之內必須擁有唯一的 Serializability。
-Atmoic Transactions Atmoic Transaction 不可以涵蓋多數的 Entity。(這邊和 Database 的定義就不太一樣了，這裡更像是應用程式的角度)
-Messages Messages 必須綁定 Entity ID，也就是說上層呼叫下層的時候是經由 Entity ID 作為目標。
-Activities Entity 除了接收訊息本身還管理 State，對於他們來說，Messages 分為兩種。
-會更改 Entity State 不會更改 Entity State (Idempotence) Activities 表示 Entity 收到訊息之後內部的變化。
-Distributed Transaction 由於我們上面定義的 Transaction 只能在單一個 Entity 內發生，當橫跨多個 Entity 時，我們就需要使用 Async Messages 去拼湊出整個 Distributed Transaction。&mldr;</div><a class=readmore href=/posts/ms-tcc/>Read more ⟶</a></section><section class=list-item><h1 class=title><a href=/posts/saas-clean-architecture/>&lt;SaaS Series: Clean Architecture></a></h1><time>Dec 26, 2022</time><br><div class=description>這個系列是研究 SaaS 實作的技術系列部落格，我們會從設計一路到實作走一遍。
+Atmoic Transactions Atmoic Transaction 不可以涵蓋多數的 Entity。(這邊和 Database 的定義就不太一樣了，這裡更像是應用程式的角度)&mldr;</div><a class=readmore href=/posts/ms-tcc/>Read more ⟶</a></section><section class=list-item><h1 class=title><a href=/posts/saas-clean-architecture/>&lt;SaaS Series: Clean Architecture></a></h1><time>Dec 26, 2022</time><br><div class=description>這個系列是研究 SaaS 實作的技術系列部落格，我們會從設計一路到實作走一遍。
 Index Clean Architecture Entities Use Cases Interface Adapters Frameworks and Drivers Clean Architecture 說到 SaaS 業界目前的首選絕對是 Uncle Bob 的 Clean Architecture，我主要會參考這個概念當作出發點。
 簡單描述一下 Clean Architecture 有什麼樣的特性。
 Independent of Frameworks: 獨立於框架之外，你可以使用框架，但是不能夠被框架給綁住。 Testable: 可以測試，這邊指的是能夠完全獨立測試商業邏輯，就算拔除 UI/Database&mldr;等外部元件。 Independent of UI/Database/External agency: 簡單來說希望所有抽象的核心邏輯完全脫離外部的元件。 為了達到以上的目標，我們用下圖進行說明。 為了達到獨立性，外圍的程式碼只能依賴內圈的程式碼，當我們修改外部程式碼的時候，內部邏輯不能夠被影響。接著我們介紹一下這些同心圓代表的意義&mldr;

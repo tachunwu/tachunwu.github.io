@@ -2,6 +2,7 @@
 title: "<The Art of Notion>"
 date: 2022-12-25T20:22:36+08:00
 draft: false
+tags: ["Engineering"]
 ---
 {{<toc>}}
 

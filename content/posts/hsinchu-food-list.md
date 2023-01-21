@@ -2,7 +2,7 @@
 title: "新竹私房美食清單"
 date: 2022-10-25T19:25:00+08:00
 draft: false
-tags: ["life"]
+tags: ["Life"]
 ---
 {{<toc>}}
 # 阿桂牛羊雜

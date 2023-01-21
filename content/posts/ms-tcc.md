@@ -2,7 +2,7 @@
 title: "<Life beyond Distributed Transactions: an Apostate’s Opinion> 碩論筆記"
 date: 2022-12-28T19:12:03+08:00
 draft: false
-tags: ["CS master"]
+tags: ["Engineering"]
 ---
 {{<toc>}}
 

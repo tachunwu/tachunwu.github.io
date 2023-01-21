@@ -131,7 +131,7 @@ Cassandra 本身是 AP 系統，所以是採取 Eventual Consistency 的策略�
 
 # 出大事拉
 
-當徹底從 MongoDB 轉移到 Cassandra 的時候，髓有事情都非常的順利，**第一個麻煩是發生在六個月後，有一天 Cassandra 就掛掉了。**
+當徹底從 MongoDB 轉移到 Cassandra 的時候事情都非常的順利，**第一個麻煩是發生在六個月後，有一天 Cassandra 就掛掉了。**
 
 我們注意到 Cassandra 有 10 sec 的 GC，完全停止了服務，像是剛剛上面說的刪除，**其實 Cassandra 會先標記成 tombstone 在讀的時候直接跳過，大約 10 天左右 (這是預設) 會 GC 掉，真的把資料刪除掉。**
 

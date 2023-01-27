@@ -111,7 +111,7 @@ clustering key 則是 artifact id。我們可以看到有三個不同的 partiti
 接下來畫出使用者的 workflow 會是像這樣。
 
 ![](/images/cassandra_5.png)
-# Logical Data Modeling
+# **Logical Data Modeling**
 
 這個部分是 Cassandra 的關鍵，上面列出來的東西 Relation Model 也要做，這個步驟開始就會有完全不同的走向。作者提供了一些技巧給我們參考 (後文統稱 DMP：Data Modeling Principles)
 

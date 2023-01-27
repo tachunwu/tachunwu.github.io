@@ -2,6 +2,7 @@
 title: "<Cassandra-based 的設計模型：Chebotko Diagrams>"
 date: 2023-01-27T16:20:23+08:00
 draft: false
+tags: ["Engineering"]
 ---
 
 ![](/images/cassandra_head.png)

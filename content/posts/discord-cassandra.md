@@ -118,7 +118,7 @@ CREATE TABLE messages (
 
 Cassandra 本身是 AP 系統，所以是採取 Eventual Consistency 的策略，更精確地說是一種 LWW (last write wins) 併發控制手法。當兩個 User 同時修改一個 Row，最後一個寫入的人會是最終的數值。
 
-作者有提一個例子的細節，在 Cassandra 內部假如有一個 User 刪除了一則 Message，但差不多的時間又有 User 去修改，為了統一這種 edge case，就已清空該 row 作為基準。
+作者有提一個例子的細節，在 Cassandra 內部假如有一個 User 刪除了一則 Message，但差不多的時間又有 User 去修改，為了統一這種 edge case，就清空該 row 作為基準。
 
 # Performance
 

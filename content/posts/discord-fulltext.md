@@ -361,7 +361,7 @@ job_task.delay(initial_job)
 
 ### **Time Spent GC/s**
 
-![](/images/discord-fulltext_77.png)
+![](/images/discord-fulltext_7.png)
 
 
 # **結論**

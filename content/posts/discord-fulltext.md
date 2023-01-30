@@ -344,7 +344,7 @@ job_task.delay(initial_job)
 3. **[cpu_usage]()**：CPU usage 在尖峰時刻過高
 4. **[io_wait]()**：如果 I/O 操作過於緩慢的話
 
-## Example：Unhealthy Cluster (ran out of heap)
+## **Example：Unhealthy Cluster (ran out of heap)**
 
 ### **Heap Free (MiB)**
 
@@ -354,7 +354,7 @@ job_task.delay(initial_job)
 
 ![](/images/discord-fulltext_5.png)
 
-## Example：****Healthy Cluster****
+## **Example：Healthy Cluster**
 
 ### **Heap Free (GiB)**
 

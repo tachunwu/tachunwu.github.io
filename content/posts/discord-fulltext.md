@@ -2,6 +2,7 @@
 title: "<Discord 如何 Full-text Index 數十億的訊息>"
 date: 2023-01-30T18:02:17+08:00
 draft: false
+tags: ["Engineering"]
 ---
 
 ![](/images/discord-fulltext_head.png)

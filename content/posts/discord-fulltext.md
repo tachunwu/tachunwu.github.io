@@ -339,7 +339,7 @@ job_task.delay(initial_job)
 
 至於甚麼時候要擴張我們的 cluster，我們參考四個主要指標：
 
-1. **[heap_free]()**：JVM 如果發生了 **Stop-The-World GC，那叫要考慮加 node 了**。
+1. **[heap_free]()**：JVM 如果發生了 **Stop-The-World GC，那就要要考慮加 node 了**。
 2. **[disk_free]()**：沒有 Disk 空間當然就要加 node，不過單純 Disk 不夠用 GCP 可以輕鬆的換機器大小，GCP 真香。
 3. **[cpu_usage]()**：CPU usage 在尖峰時刻過高
 4. **[io_wait]()**：如果 I/O 操作過於緩慢的話

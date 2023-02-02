@@ -17,7 +17,7 @@ tags: ["Engineering"]
 
 # **預先知識**
 
-由於這篇文章會採用大量篇幅的 k8s 專有名詞，所以至少希望你知道一些 [**kubernetes 的名詞的定義**]()，例如
+由於這篇文章會採用大量篇幅的 kubernetes 專有名詞，所以至少希望你知道一些 [**kubernetes 的名詞的定義**]()，例如
 
 - **Pod**
 - **Node**
@@ -26,9 +26,9 @@ tags: ["Engineering"]
 
 # **其實不是 Container Orchestration？**
 
-後續的篇幅我們會介紹 kubernetes 是如何運作的，不過作者卻先做了一點名詞上的澄清。[如果你去 Google 查 kubernetes，多半會告訴你這是一種 **Container Orchestration**]()，[Orchestration 這個詞**像是有一個交響樂團的中心指揮家，指揮著樂團的演奏。**]()
+後續的篇幅我們會介紹 kubernetes 是如何運作的，不過作者卻先做了一點名詞上的澄清。[如果你去 Google 查 kubernetes，多半會告訴你 kubernetes 是一種 **Container Orchestration**]()，[Orchestration 這個詞**像是有一個交響樂團的中心指揮家，指揮著樂團的演奏。**]()
 
-雖然每種層面上來說 kubernetes 是 Container Orchestration 沒有錯，[**但是作者覺得比喻成 jazz improv 會更為恰當！**]()
+雖然某種層面上來說 kubernetes 是 Container Orchestration 沒有錯，[**但是作者覺得比喻成 jazz improv 會更為恰當！**]()
 
 # **kubernetes 系統和元件解釋**
 
@@ -64,29 +64,29 @@ Kubernetes 有一個 pluggable 的驗證系統，除了內部的驗證方式，�
 
 由於 kubernetes 本身的版本不斷推進，API Server 本身也要支援不同版本的生命週期，至於資料則是靠 etcd 來保存。
 
-[**其中推動這些最重要的功能就是 watch，watch 的意思是當其中一項資源被更動了，正在 watch 這項資源的元件可以做出相對應的行為。**]()
+[**在 API Server 中最重要的功能就是 watch！watch 的意思是當其中一項資源被更動了，正在 watch 這項資源的元件可以得知訊息，然後做出相對應的行為。**]()
 
 # ****Business Logic: Controller Manager & Scheduler****
 
-至於最後一片拼圖就能讓 kubernetes 整個活起來！**我們有兩種 Servers 圍繞使用 API Server，她們分別是 [Controller Manager]() 和 [Scheduler]()**。作者提到，的確可以把這些東西全部寫進去一個超大的 binary 檔案，不過分開來設計也就為了未來的擴展性做出鋪路的動作。(雖然作者說這樣設計是一個歷史性的意外 XD)
+至於最後一片拼圖就能讓 kubernetes 整個活起來！[**我們有兩種 Servers 圍繞使用 API Server**]()，她們分別是 [**Controller Manager**]() 和 [**Scheduler**]()。作者提到，的確可以把這些東西全部寫進去一個超大的 binary 檔案，不過分開來設計也就為了未來的擴展性做出鋪路的動作。(雖然作者說這樣設計是一個歷史性的意外 XD)
 
 ## **Scheduler**
 
 主要負責這些工作：
 
-1. 看 etcd 中那些 Pods 還沒有被安排到 Node 上
-2. 檢查 cluster 的狀態 
-3. 選一個 node，符合請求的要求
-4. 部屬 Pods 到 Node 上面
+1. **看 etcd 中那些 Pods 還沒有被安排到 Node 上**
+2. **檢查 cluster 的狀態** 
+3. **選一個 node，符合請求的限制**
+4. **部屬 Pods 到 Node 上面**
 
 ## **Controller**
 
 同樣的 Controller 也會做和 Scheduler 差不多的事情。
 
-1. 透過 watch API Server 得知目前 cluster 狀態
-2. 偵測到異常，然後重新佈署 Pods 
+1. **透過 watch API Server 得知目前 cluster 狀態**
+2. **偵測到異常，然後重新佈署 Pods** 
 
-舉例來說：當今天使用者部屬了 ReplicaSet (一種確保特定數量的 Pods 資源)，假設今天是設定為 3 好了，因為意外 Pod 死亡了，Controller 會 watch 這個資源，然後重新佈署 Pod。
+舉例來說：當今天使用者部屬了 ReplicaSet (一種確保特定數量的 Pods 資源)，假設今天是設定為 3 好了，因為意外 Pod 死亡了變成 2，Controller 會 watch 這個資源，然後重新佈署 Pod，讓 Pod 數量穩定。
 
 ## ****Node Agent: Kubelet****
 
@@ -117,7 +117,7 @@ kubernetes 的 API Server 就是所有的中心點，雖然說 wiki 和一些文
 
 其中還隱藏了兩個重要的觀念作者沒有提到，就是 [**Command 和 Event**]()。
 
-[**Command** 本身就像是打 API 一樣，可能成功可能失敗；但是 **Event** 則是記錄下已經發生的事情，被保存在 Disk 上了，所以後續的元件可以依照 Event 繼續執行整個系統的任務。]()
+[**Command 本身就像是打 API 一樣，可能成功可能失敗；但是 Event 則是記錄下已經發生的事情，被保存在 Disk 上了，所以後續的元件可以依照 Event 繼續執行整個系統的任務。**]()
 
 舉例來說，上面的故事 user 發完請求之後，東西被寫入 etcd，API Server 就掛點了，但是重啟之後其他人還是能夠從 API Server → etcd 繼續執行 user 想要的部屬行為。我想分散式系統的魅力就在此吧！透過一些紀錄和配合的 protocol 可以完成一些看似非常困難的任務！
 

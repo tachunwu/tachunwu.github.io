@@ -77,7 +77,7 @@ Kubernetes 有一個 pluggable 的驗證系統，除了內部的驗證方式，�
 1. **看 etcd 中那些 Pods 還沒有被安排到 Node 上**
 2. **檢查 cluster 的狀態** 
 3. **選一個 node，符合請求的限制**
-4. **部屬 Pods 到 Node 上面**
+4. **部署 Pods 到 Node 上面**
 
 ## **Controller**
 
@@ -86,7 +86,7 @@ Kubernetes 有一個 pluggable 的驗證系統，除了內部的驗證方式，�
 1. **透過 watch API Server 得知目前 cluster 狀態**
 2. **偵測到異常，然後重新佈署 Pods** 
 
-舉例來說：當今天使用者部屬了 ReplicaSet (一種確保特定數量的 Pods 資源)，假設今天是設定為 3 好了，因為意外 Pod 死亡了變成 2，Controller 會 watch 這個資源，然後重新佈署 Pod，讓 Pod 數量穩定。
+舉例來說：當今天使用者部署了 ReplicaSet (一種確保特定數量的 Pods 資源)，假設今天是設定為 3 好了，因為意外 Pod 死亡了變成 2，Controller 會 watch 這個資源，然後重新佈署 Pod，讓 Pod 數量穩定。
 
 ## ****Node Agent: Kubelet****
 
@@ -98,7 +98,7 @@ Kubernetes 有一個 pluggable 的驗證系統，除了內部的驗證方式，�
 
 ![](/images/jazz-kubernetes_1.png)
 
-這是一個 user 部屬一個 Pod 的流程例子。
+這是一個 user 部署一個 Pod 的流程例子。
 
 1. **首先 user 先把請求發到 API Server，驗證過後就會把這個資源的狀態寫到 etcd。**
 2. **scheduler 一直 watch API Server，會發現一個 “unbound” 的 Pod，經由 scheduler 演算法決定好部署計畫後，透過 API Server 把計畫寫回 etcd。**
@@ -119,7 +119,7 @@ kubernetes 的 API Server 就是所有的中心點，雖然說 wiki 和一些文
 
 [**Command 本身就像是打 API 一樣，可能成功可能失敗；但是 Event 則是記錄下已經發生的事情，被保存在 Disk 上了，所以後續的元件可以依照 Event 繼續執行整個系統的任務。**]()
 
-舉例來說，上面的故事 user 發完請求之後，東西被寫入 etcd，API Server 就掛點了，但是重啟之後其他人還是能夠從 API Server → etcd 繼續執行 user 想要的部屬行為。我想分散式系統的魅力就在此吧！透過一些紀錄和配合的 protocol 可以完成一些看似非常困難的任務！
+舉例來說，上面的故事 user 發完請求之後，東西被寫入 etcd，API Server 就掛點了，但是重啟之後其他人還是能夠從 API Server → etcd 繼續執行 user 想要的部署行為。我想分散式系統的魅力就在此吧！透過一些紀錄和配合的 protocol 可以完成一些看似非常困難的任務！
 
 # **附錄：chubby Families**
 

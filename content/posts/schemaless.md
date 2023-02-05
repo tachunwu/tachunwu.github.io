@@ -1,5 +1,5 @@
 ---
-title: "<Uber: Schema-less 的系統起源>"
+title: "<Uber Schema-less 的系統起源>"
 date: 2023-02-05T22:08:57+08:00
 draft: false
 ---

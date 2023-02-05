@@ -3,7 +3,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-2LYZQ778V0")</script><div class=main><a href=https://tachunwu.github.io/>Tachunn Publication</a></div><nav><a href=/>Home</a>
 <a href=/posts>All posts</a>
 <a href=/about>About</a>
-<a href=/tags>Tags</a></nav></header><main class=list><div class=site-description></div><section class=list-item><h1 class=title><a href=/posts/schemaless/>&lt;Uber: Schema-less 的系統起源></a></h1><time>Feb 5, 2023</time><br><div class=description>Index 前情提要 故事背景 先用老招 尋找新的 Infra，然後放棄 手動打造新的系統 Schema-less Overview 細節 Consistency and Atomicity Performance 感想 前情提要 這篇文章會被我研究到也是有些故事，由於蠻有趣的所以我就提一下，希望能夠勾起讀者的興趣！有天我在研究 Uber 的 Schemaless 系統時發現的一些趣事。
+<a href=/tags>Tags</a></nav></header><main class=list><div class=site-description></div><section class=list-item><h1 class=title><a href=/posts/schemaless/>&lt;Uber Schema-less 的系統起源></a></h1><time>Feb 5, 2023</time><br><div class=description>Index 前情提要 故事背景 先用老招 尋找新的 Infra，然後放棄 手動打造新的系統 Schema-less Overview 細節 Consistency and Atomicity Performance 感想 前情提要 這篇文章會被我研究到也是有些故事，由於蠻有趣的所以我就提一下，希望能夠勾起讀者的興趣！有天我在研究 Uber 的 Schemaless 系統時發現的一些趣事。
 (以下是三篇文章的關鍵字，由於台灣的 Uber TW 網站掛掉了，我整理一下關鍵字，大家之後可以搜尋看看)
 &lt;Designing Schemaless, Uber Engineering&rsquo;s Scalable Datastore Using MySQL> &lt;Using Triggers On Schemaless, Uber Engineering&rsquo;s Datastore Using MySQL> &lt;The Architecture of Schemaless, Uber Engineering&rsquo;s Trip Datastore Using MySQL> 這幾篇文章都很有趣，但是我仔細檢查之下，發現他們在文中有引用到別人的想法，那我為甚麼不去研究原版呢？這樣不是概念更清楚嗎 XD？
 我就找到這篇文章，也就是 &lt;How FriendFeed uses MySQL to store schema-less data>。在我做了一些搜尋之後，發現這篇文章來頭可不小！

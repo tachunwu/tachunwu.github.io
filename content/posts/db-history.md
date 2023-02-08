@@ -22,7 +22,7 @@ draft: false
 
 **由一位數學家 Ted Codd 的一篇 Paper <[A relational model of data for large shared data banks](https://dl.acm.org/doi/10.1145/362384.362685)> 開始當代 Database 的基礎，也就是大家熟知的 ER Model 起源就是這篇 Paper。**
 
-雖然這篇 Papar 大家都覺得很精妙，但是畢竟沒有實作出真正的軟體，所以就有一些人常是基於這篇 Paper 來實作系統**例如**：
+雖然這篇 Papar 大家都覺得很精妙，但是畢竟沒有實作出真正的軟體，所以就有一些人常是基於這篇 Paper 來實作系統[**例如**]()：
 
 - **[System R]()：IBM Research (San Jose)**
 - **[INGRES]()：U.C. Berkeley**

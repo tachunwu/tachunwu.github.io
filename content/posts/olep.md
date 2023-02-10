@@ -8,7 +8,7 @@ tags: ["Engineering"]
 {{<toc>}}
 # **導言**
 
-今天分享的這篇論文 [<**Online Event Processing: Achieving consistency where distributed transactions have failed**>]() 是由頂頂大名的 **Martin Kleppmann** 所撰寫，**也就是大家熟知 DDIA 的作者 (下圖)，此書被譽為北美軟體工程師必看的一本書**。
+今天分享的這篇論文 [<**Online Event Processing: Achieving consistency where distributed transactions have failed**>]() 是由鼎鼎大名的 **Martin Kleppmann** 所撰寫，**也就是大家熟知 DDIA 的作者 (下圖)，此書被譽為北美軟體工程師必看的一本書**。
 
 而這篇論文是發表在 [**ACM Queue 期刊上的一篇論文**]()，[**主要的觀點是提出一種以 Event 的觀念來設計系統，也就是 OLEP：Online Event Processing。**]()
 

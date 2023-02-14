@@ -2,6 +2,7 @@
 title: "<Notion 的 Data Model & Sharding Postgres>"
 date: 2023-02-14T14:05:32+08:00
 draft: false
+tags: ["Engineering"]
 ---
 
 ![](/images/notion_head.png)

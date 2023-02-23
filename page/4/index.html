@@ -3,7 +3,8 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-2LYZQ778V0")</script><div class=main><a href=https://tachunwu.github.io/>Tachunn Publication</a></div><nav><a href=/>Home</a>
 <a href=/posts>All posts</a>
 <a href=/about>About</a>
-<a href=/tags>Tags</a></nav></header><main class=list><div class=site-description></div><section class=list-item><h1 class=title><a href=/posts/discord-cassandra/>&lt;Discord 如何處理一天數億的訊息></a></h1><time>Jan 21, 2023</time><br><div class=description>Index 前言 目標 故事開始 遇到瓶頸 選新的候選人 問題 需求 Data Modeling Bucket Dark Launch Trade-off Performance 出大事拉 The Future Near Term Long Term 結語 心得 前言 這篇部落格會翻譯和參考 &lt;How Discord Stores Billions of Messages> 這篇部落格的內容做整理和翻譯。
+<a href=/tags>Tags</a></nav></header><main class=list><div class=site-description></div><section class=list-item><h1 class=title><a href=/posts/cassandra/>&lt;Cassandra-based 的設計模型：Chebotko Diagrams></a></h1><time>Jan 27, 2023</time><br><div class=description>Index 前言 先備知識 目標 Cassandra’s Data Model Keyspace Table Table Example：single-row partitions Table Example：multi-row partitions Query Model Conceptual Data & Application Workflow Modeling 實際案例 Logical Data Modeling Data Modeling Principles Mapping Rules Chebotko Diagrams Notation Logical Chebotko Diagram Physical Chebotko Diagram 注意事項 結論 前言 這篇文章會翻譯和整理一篇論文 &lt;A Big Data Modeling Methodology for Apache Cassandra>，這篇論文是由維護 Apache Cassandra 商用版 DataStax 的工程師所寫的論文 (發表在 2015 IEEE BigDataCongress 上)。
+我個人認為非常適合做為學習 Cassandra 這種系統的基石 (如果有經驗一點的讀者會發現 Google BigTable 和 AWS 的 DynamoDB 都可以適用本論文的概念)。&mldr;</div><a class=readmore href=/posts/cassandra/>Read more ⟶</a></section><section class=list-item><h1 class=title><a href=/posts/discord-cassandra/>&lt;Discord 如何處理一天數億的訊息></a></h1><time>Jan 21, 2023</time><br><div class=description>Index 前言 目標 故事開始 遇到瓶頸 選新的候選人 問題 需求 Data Modeling Bucket Dark Launch Trade-off Performance 出大事拉 The Future Near Term Long Term 結語 心得 前言 這篇部落格會翻譯和參考 &lt;How Discord Stores Billions of Messages> 這篇部落格的內容做整理和翻譯。
 我個人一向喜歡研究自己喜歡用的軟體，身為每天都會上 DC 和朋友社交的我來說，研究一下這麼厲害的服務，也是我的興趣之所在。
 目標 這篇文章的目標也很明確，Discord 每天會需要處理一億的訊息 (100 million/day)，這篇文章會解釋他們怎麼做到的。
 故事開始 羅馬不是一天造成的，Discord 在 2015 年只花了兩個月就建立好了第一版。當時他們只用了一台 MongoDB 當作主要 Database，作者 (Discord CTO) 也直接講明了，當時選用 MongoDB 純粹只是為了快速疊代產品，以最快的速度去打造市場想要的東西。從一開始就不打算用 Sharding 的 MongoDB，不僅複雜難用而且還不穩定。所以一開始使設計上就給出很大的移植特性。(MongoDB QQ)
@@ -16,30 +17,7 @@ Artwort Spotify 宣傳卡 Spotify 本身有幫忙藝術家做宣傳卡，網頁�
 怎麼擺沒有技巧，就是亂擺，但是亂擺完要花一些時間去盯著你擺的東西看，你會慢慢有好像可以調一下的感覺，大概重複個幾次你就會覺得畫面表較好了，感謝我的平面設計老師，在清大上過最值得的課(沒有之一！)
 Note: 據說我的迷幻大師兄蘋果的賈伯斯有去廟裡連續打坐 10 小時想蘋果的產品，讓自己經由某種禪定狀態讓大腦自己設計產品，不過這是題外話，有機會我們再談！ 我有用 VSCO 調色一下，這種有點病態的感覺，用一些看起來比較不自然的濾鏡我覺得比較適合。 接著就是老套路，放進 iPad，用 Procreate 處理一下，反正我腦袋早就有這種美感的模型了，畫出就對了！ Motion 這次又多了一點挑戰！嘗試做了 MV，但是不是像上次那種用手機拍的，而是一幀一幀畫面去畫的，讓各位可以體驗原汁原味的嗑藥感(這我想像出來的拉，不會真的看到這種東西(吧！) (つ´ω`)つ
 我大概花了三個小時一直畫，但是沒有目的的畫，當我畫完一幀之後就會用接力的方式去繼續創作，然後把過程錄影下來，enjoy！
-後記 意外的，超級順利的完成這個 Project，感恩的心。&mldr;</div><a class=readmore href=/posts/clonopammmmmmmm/>Read more ⟶</a></section><section class=list-item><h1 class=title><a href=/posts/the-observer/>&lt;The Observer 觀察者></a></h1><time>Jan 14, 2023</time><br><div class=description>Index 前情提要 觀察者 體驗 顯現 社會 後記 前情提要 這篇故事我會分成幾個章節，分別會提到一些有趣的概念，彼此可以各自獨立，也可以連成一串。
-觀察者 我不知道有多少人跟我一樣會列清單做事，有天晚上我正列好一些我等等要做的事情，例如&mldr;
-看一下新買的書 開一瓶可樂 Review 一下 Code，寫一下研究的東西 大概像這樣，就在列好的一瞬間，我突然有種疑惑，感覺這有點像寫程式，這份清單就是指令，而我在未來幾個小時扮演電腦。
-那樣在我下筆列清單的一瞬間，又是 &ldquo;誰&rdquo; 在紙上寫下 『大均在紙上寫下等等規劃要做的事項』 ？
-如果我直接跟我說，哎呀，這是上帝寫的拉！我想我連我自己都不能說服我自己。
-但就算剛剛我的假設是對的好了，那又是誰控制著上帝？
-也就是那個在在紙上寫下 &ldquo;請在紙上寫下 『寫下大均在紙上寫下等等規劃要做的事項』 &ldquo;
-這個故事可以無限的接龍，在無數的虛擬過程中真實的機率微乎其微，能夠意識到這件事情本身就是能夠構成 &ldquo;我&rdquo; 的現象本身。
-根本不用等到未來的駭客任務劇情，此時此刻我們就這個劇情中 XD
-體驗 當然，上面只是嚴格說起來只是 &ldquo;理論&rdquo;，應該讓你們體驗看看。
-我在 IG 上面發起了一個小投票遊戲，這個章節我不會講投票的內容，投票主題大概是這樣，後面會有一些簡單的問答之類的。
-你看到這個貼文的瞬間，你的大腦原本在跑 IG 幫你設計的指令 &ldquo;三則貼文 + 送一則廣告 = 多巴胺&rdquo;，就在那幾秒鐘的投票時間，你的意識轉移到這個問題上面，貼文的指令變成你思維的 &ldquo;上帝&rdquo;，就算只有短短幾秒，不管有沒有投票的人都是。
-更有趣的是，如果你會看到這裡，多半是 好奇有想看到什麼你想知道的，但是你的內心沒有清楚要什麼(不然你就不會進來看嘛～)，那些一秒點過或是完全沒有去想問題的人，自然不會有興趣來看這篇文章，你"掉入"到這一刻是不是又多了一分神秘感&mldr;
-顯現 對我們每個人來說，事物的意義是在於你有沒有意識到它的存在
-假設有一個在孤兒院長大的人，看到 &ldquo;親情&rdquo; 這題的時候，和其他人的感受反應絕對完全不一樣，不僅如此，她甚至還能夠思考這個問題！
-我們對於生活中人事物的 &ldquo;意識&rdquo;，從來不是幫我們找到答案的工具，而是提出這個問題本身！
-人類甚至已經進化到可以傳遞和執行別人思考的過程，下面的例子可以體驗看看。
-比如說你想要怎麼追一個女生/男生這個問題好了。你可以想 當你當了父母，你希望別人怎麼追你的女兒/兒子。
-這個答案是一樣的嗎？還是不一樣的？哪一個好？你覺得你該怎麼協調腦中的聲音？
-回到話題，我設計這個投票小遊戲的時候有動過一個巧思，就是希望你們玩玩看這種體驗。
-假設今天你是屬於希望朋友打開來看的那群好了，你是在相信 我相信那個人會接受我真實的看法。
-如果 你覺得他不能接受真實的你，你會希望對方不要看。你完全可以基於維護情感的理由，卻採取不一樣的行動，沒有哪種比較正確。
-不論你採取什麼行動都不重要，因為當你 &ldquo;開始思考這個問題的時候&rdquo;，你就是重視這段關係
-現實上我們卻只能看到行為，卻永遠無法洞察別人的內心，善與惡都是自己對自己的承諾，與他人無關&mldr;</div><a class=readmore href=/posts/the-observer/>Read more ⟶</a></section><ul class=pagination><span class="page-item page-prev"><a href=/page/3/ class=page-link aria-label=Previous><span aria-hidden=true>← Prev</span></a></span>
+後記 意外的，超級順利的完成這個 Project，感恩的心。&mldr;</div><a class=readmore href=/posts/clonopammmmmmmm/>Read more ⟶</a></section><ul class=pagination><span class="page-item page-prev"><a href=/page/3/ class=page-link aria-label=Previous><span aria-hidden=true>← Prev</span></a></span>
 <span class="page-item page-next"><a href=/page/5/ class=page-link aria-label=Next><span aria-hidden=true>Next →</span></a></span></ul></main><footer><div style=display:flex><a class=soc href=https://github.com/tachunwu rel=me title=GitHub><i data-feather=github></i></a>
 <a class=border></a></div><div class=footer-info>2023 💠 © Tachunn | <a href=https://github.com/athul/archie>Archie Theme</a> | Built with <a href=https://gohugo.io>Hugo</a></div></footer><script async src="https://www.googletagmanager.com/gtag/js?id=G-2LYZQ778V0"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-2LYZQ778V0")</script><script>feather.replace()</script></div></body></html>

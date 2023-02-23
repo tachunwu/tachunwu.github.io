@@ -243,7 +243,7 @@ Data Sources 可以是以下例子：
 
 ![](/images/hexagonal_1.png)
 
-## [隱藏 ****data source 細節****]()
+## [隱藏 data source 的細節]()
 
 其中一個好處就是就是能夠封裝 data source 實作的細節。
 

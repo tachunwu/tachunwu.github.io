@@ -4,7 +4,7 @@ date: 2023-02-23T16:47:26+08:00
 draft: false
 ---
 ![](/images/hexagonal_head.png)
-
+{{<toc>}}
 # [導言]()
 
 這篇是整理翻譯 <****[Ready for changes with Hexagonal Architecture](https://netflixtechblog.com/ready-for-changes-with-hexagonal-architecture-b315ec967749)****>，其中 Netflix 工程師把它們從 Monolith 轉換到 Microservices 然後介紹 Hexagonal Architecture 種種細節。

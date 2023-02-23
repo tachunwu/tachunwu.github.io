@@ -2,6 +2,7 @@
 title: "<Netflix 的軟體設計哲學：Hexagonal Archtecture>"
 date: 2023-02-23T16:47:26+08:00
 draft: false
+tags: ["Engineering"]
 ---
 ![](/images/hexagonal_head.png)
 {{<toc>}}

@@ -44,14 +44,18 @@ draft: false
 
 # [Chapter 3：****Hexagonal Architecture****]()
 
-我們決定用 Hexagonal Architecture 來解決上面的難題。Hexagonal Architecture 的想法是將 input 和 output 放在設計的邊緣，可以不影響商業邏輯的情況下更換 data sources。
+我們決定用 Hexagonal Architecture 來解決上面的難題。
 
-[*註記*]()：*以下我會用我的理解寫一些 code，而這些並不是原始文章的內容，請讀者注意！*
+**Hexagonal Architecture 的想法是將 input 和 output 放在設計的邊緣，可以不影響商業邏輯的情況下更換 data sources。**
+
+
 
 > **Hexagonal Architecture 的哲學是商業邏輯不應該依賴於任何 REST、GraphQL API，還有也不能依賴於 data 從哪裡來，甚至是從一個 CSV 檔讀取，都不能影響到商業邏輯。**
 > 
 
 其中一個最大的好處就是**我們能夠獨立測試我們自己的商業邏輯有沒有問題。**
+
+[*註記*]()：*以下我會用我的理解寫一些 Go code，而這些並不是原始文章的內容，請讀者注意！*
 
 ## [Core ****concepts****]()
 
@@ -81,9 +85,17 @@ type ShootingLocation struct {
 
 ### **Repositories**
 
-Repositories 是一種 Interface，確保 Entities 的建立和改變。Repositories 會提供一堆 methods 可以跟 data sources 溝通，比如說：回傳一個 User 或是一堆 Users。
+**Repositories 是一種 Interface，確保 Entities 的建立和改變。Repositories 會提供一堆 methods 可以跟 data sources 溝通，比如說：回傳一個 User 或是一堆 Users。**
 
 ```go
+type User struct {
+    ID        string
+    Name      string
+    Email     string
+    CreatedAt time.Time
+    UpdatedAt time.Time
+}
+
 type UserRepository interface {
     // 取得使用者 by ID
     GetUserByID(id string) (*User, error)

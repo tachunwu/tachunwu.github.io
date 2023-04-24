@@ -3,7 +3,20 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-2LYZQ778V0")</script><div class=main><a href=https://tachunwu.github.io/>Tachunn Publication</a></div><nav><a href=/>Home</a>
 <a href=/posts>All posts</a>
 <a href=/about>About</a>
-<a href=/tags>Tags</a></nav></header><main class=list><div class=site-description></div><section class=list-item><h1 class=title><a href=/posts/ms-tcc/>&lt;Life beyond Distributed Transactions: an Apostate’s Opinion> 碩論筆記</a></h1><time>Dec 28, 2022</time><br><div class=description>Index Abstract 假設 Layers of the Appilication & Scale-aware Transactional Scopes 用詞定義 Entities Atmoic Transactions Messages Activities Distributed Transaction Remembering Messages as State Tentative/Cancel/Confirm 個人思考 Abstract 探討 Scale Appilication 的語言學
+<a href=/tags>Tags</a></nav></header><main class=list><div class=site-description></div><section class=list-item><h1 class=title><a href=/posts/the-meaning/>&lt;The Meaning 意義組成意識></a></h1><time>Dec 31, 2022</time><br><div class=description>我們活在意義的世界，而不是"真實"世界
+接下來我會用一個簡單的實驗說明這個概念，當然你可以嘗試做做看，但是不做也不會影響你理解這個概念。
+首先先把&mldr;
+Youtube 打開隨便播個影片 同時打開 Spotify 播放一首音樂 再同時隨便拿一本書翻開其中一頁 再同時開一包零食吃 再同時開個 Podcast 來聽 這個時候你會發現，幹你娘咧，亂成一團了拉，但是你還是可以隨時切換注意力到這些事物上面。比如說，你可以聽 Podcast 的內容、或是品嚐零食的味道，當你把注意力切換到面對的東西上面時，其他東西就會變成背景噪音。
+這個實驗和我們大腦的運作差不多，就像是各種意義和訊息的超級大雜燴，我們的大腦就像是一次播著數千萬種想法的超吵鬧環境，我們只是選擇其中想要的頻道來收聽，而我們只會感受到意識現在正在注意的事情上。
+你會發現一件神奇的事情，就是我們其實沒有一個固定的實體存在，我們碰到什麼東西就變成什麼東西，比如說我聽 Poscast 我自動會把自己帶入主播的語境中，如果是讀那本翻開的書，我就會融入文字的上下文意義。
+我們意識的存在就是停留在這些事物的意義上，這些事物的意義本身就獨立於我們存在，不論我有沒有點開這部影片或是翻開那本書，這些東西都安安靜靜的在意義的世界中等著被我們的意識觸發和定義。
+一切能夠被你感受到的東西都在內在發生而非外在，舉凡各種道德、真理、知識、藝術、愛、迷因、情感刺激、性愛姿勢、宗教、電玩、喜劇、血腥暴力&mldr;etc。
+外在刺激就像是一個梯子，我們用這個梯子爬上去尋找意義，等我們找到意義的時候這個梯子就不需要了。
+活著不需要有人生目標，人生目標會被目前的認知給侷限，當你多認識一點世界，你的目標又要改變。
+或許生命本身只是認識宇宙，從各種層面上的認識。
+追尋愛不重要、追尋真理也不重要、追尋成功也不重要。重要的是對你來說&mldr;愛的定義是什麼？真理的定義是什麼？成功的定義是什麼？
+不要誤解我的意思，我不是要你寫出哲學大作去幫這些東西下定義，而是當你採取什麼樣的行動的時候，你會覺得你有做到你想追求的東西，當你得到答案的瞬間，時間空間就沒有意義了，所有的獎勵和慾望在當下就會被滿足，不會悔恨過去或是寄託未來。
+&ldquo;活著的意義&rdquo; 這個問題的解答&mldr;就是這個問題本身！&mldr;</div><a class=readmore href=/posts/the-meaning/>Read more ⟶</a></section><section class=list-item><h1 class=title><a href=/posts/ms-tcc/>&lt;Life beyond Distributed Transactions: an Apostate’s Opinion> 碩論筆記</a></h1><time>Dec 28, 2022</time><br><div class=description>Index Abstract 假設 Layers of the Appilication & Scale-aware Transactional Scopes 用詞定義 Entities Atmoic Transactions Messages Activities Distributed Transaction Remembering Messages as State Tentative/Cancel/Confirm 個人思考 Abstract 探討 Scale Appilication 的語言學
 假設 Layers of the Appilication & Scale-aware 上層不用考慮 Scale 下層需要實作 Scale-aware Transactional Scopes 本文聚焦在討論 Transaction 在特定集合內的 Serializability，我們只要求在特定的機器內部維持隔離性，而不是整個 Data Center 強制維持一致。
 用詞定義 Entities 本文定義 Entity 必須擁有一個 ID 或是 Key，而且在 Entity 之內必須擁有唯一的 Serializability。
 Atmoic Transactions Atmoic Transaction 不可以涵蓋多數的 Entity。(這邊和 Database 的定義就不太一樣了，這裡更像是應用程式的角度)&mldr;</div><a class=readmore href=/posts/ms-tcc/>Read more ⟶</a></section><section class=list-item><h1 class=title><a href=/posts/saas-clean-architecture/>&lt;SaaS Series: Clean Architecture></a></h1><time>Dec 26, 2022</time><br><div class=description>這個系列是研究 SaaS 實作的技術系列部落格，我們會從設計一路到實作走一遍。
@@ -13,14 +26,7 @@ Independent of Frameworks: 獨立於框架之外，你可以使用框架，但�
 Entities 最核心的業務邏輯部分，可以是 object/method/data structures/functions，這是整個系統最穩穩定的部分，我們不會希望業務以外的更動去影響到這層。
 Use Cases 這層是介於 Entities 和外圍元件的中間層，這層會依賴 Entities，但是又不會希望更動 Database/UI 會影響到這層。
 Interface Adapters 這層是轉換層，我們希望把所有外部的資料結構全部轉換成內部 Use Cases/Entities 看得懂的資料結構。舉例來說，這裡進去你不應該看到任何 SQL 之類的語句，這些全部都會轉換成 Use Cases/Entities。
-Frameworks and Drivers 最外圍的部分，基本上我們不會自己寫什麼 code，此處多半是處理細節，避免影響到內部的部分就好。&mldr;</div><a class=readmore href=/posts/saas-clean-architecture/>Read more ⟶</a></section><section class=list-item><h1 class=title><a href=/posts/container/>&lt;信仰的容器></a></h1><time>Dec 26, 2022</time><br><div class=description>人是一種信仰的容器，我們只能裝下信仰，我們的腦中有很多的信仰，在無數中信仰中最強烈的信仰便會變成真實，如此而已。
-舉例來說，如果我相信我會變成一個廚師，我就會練習刀工、研究食譜。如果我今天發現我做的很難吃，我可以說我會繼續練習直到我成為廚師，或是我可以直接說我不相信我能成為廚師然後放棄，讓腦中其他的信仰變成新的真實。
-對我們自己來說，現實從來就不是讓我們快樂或是痛苦或是成就的根本原因，根本原因是信仰問題，要嘛就 放棄信仰用其他的信仰替換、要嘛就是 強化自己的固有信仰，無關對錯、無關善惡，只是選擇而已。
-知識和信仰本身是互補的，就用廚師的例子來說，如果你想 學習到 “我沒有當廚師的天分” 這件事情，你就要同時放棄你 相信 &ldquo;你能成為廚師這間事情&rdquo;，反之也是。
-科學只能證明某些東西是錯的，但是並不能說明某些東西是對的。舉例來說，古人認為世界是由水、火、土、氣四大元素所構成，但是就是有人不相信，所以想辦法證明這件事情是錯的，如此推動人類文明的演進。今天是對的道理，明天不一定是對的，其中就是信仰和科學的精神在其中運作。
-我認為能不能完成某些事情其實是假議題，因為你可以永遠說自己還在完成的路上，不爽做就說自己沒能力完成。
-所以真正的問題其實是 你的信仰是什麼？還有現在的狀態是什麼？
-前者不需要任何理由，信仰只能藉由內觀的方式感知。但是信仰本身帶有不穩定性，會因為環境的擾動而動搖，所以需要用科學精神推進當前的狀態。人不應該考慮道德的形式，而是要考慮要怎麼樣才能做到，真正的智慧和愛會在這個過程中隨行。&mldr;</div><a class=readmore href=/posts/container/>Read more ⟶</a></section><ul class=pagination><span class="page-item page-prev"><a href=/page/6/ class=page-link aria-label=Previous><span aria-hidden=true>← Prev</span></a></span>
+Frameworks and Drivers 最外圍的部分，基本上我們不會自己寫什麼 code，此處多半是處理細節，避免影響到內部的部分就好。&mldr;</div><a class=readmore href=/posts/saas-clean-architecture/>Read more ⟶</a></section><ul class=pagination><span class="page-item page-prev"><a href=/page/6/ class=page-link aria-label=Previous><span aria-hidden=true>← Prev</span></a></span>
 <span class="page-item page-next"><a href=/page/8/ class=page-link aria-label=Next><span aria-hidden=true>Next →</span></a></span></ul></main><footer><div style=display:flex><a class=soc href=https://github.com/tachunwu rel=me title=GitHub><i data-feather=github></i></a>
 <a class=border></a></div><div class=footer-info>2023 💠 © Tachunn | <a href=https://github.com/athul/archie>Archie Theme</a> | Built with <a href=https://gohugo.io>Hugo</a></div></footer><script async src="https://www.googletagmanager.com/gtag/js?id=G-2LYZQ778V0"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-2LYZQ778V0")</script><script>feather.replace()</script></div></body></html>

@@ -2,6 +2,7 @@
 title: "<gravity-router: On-demand Look-aside Distributed Cache>"
 date: 2023-06-12T18:39:47+08:00
 draft: false
+tags: ["Engineering"]
 ---
 ![](/images/gravity-router_head.jpg)
 {{<toc>}}
